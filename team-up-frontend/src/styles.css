@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap");
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-glow: var(--glow);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+}
+
+:root {
+  --radius: 0.875rem;
+
+  /* Midnight Indigo — dark by default */
+  --background: oklch(0.12 0.04 280);
+  --foreground: oklch(0.97 0.01 270);
+
+  --surface: oklch(0.16 0.05 278);
+  --surface-elevated: oklch(0.2 0.06 278);
+
+  --card: oklch(0.16 0.05 278);
+  --card-foreground: oklch(0.97 0.01 270);
+
+  --popover: oklch(0.18 0.05 278);
+  --popover-foreground: oklch(0.97 0.01 270);
+
+  --primary: oklch(0.62 0.22 275);
+  --primary-foreground: oklch(0.99 0.005 270);
+  --glow: oklch(0.72 0.2 285);
+
+  --secondary: oklch(0.24 0.07 278);
+  --secondary-foreground: oklch(0.97 0.01 270);
+
+  --muted: oklch(0.22 0.05 278);
+  --muted-foreground: oklch(0.7 0.04 275);
+
+  --accent: oklch(0.3 0.12 282);
+  --accent-foreground: oklch(0.99 0.005 270);
+
+  --destructive: oklch(0.62 0.24 25);
+  --destructive-foreground: oklch(0.99 0.005 270);
+
+  --border: oklch(0.28 0.06 278 / 60%);
+  --input: oklch(0.22 0.05 278);
+  --ring: oklch(0.62 0.22 275);
+
+  --gradient-hero:
+    radial-gradient(ellipse at top, oklch(0.3 0.18 285 / 0.55), transparent 60%),
+    radial-gradient(ellipse at bottom right, oklch(0.45 0.2 295 / 0.35), transparent 50%),
+    linear-gradient(180deg, oklch(0.1 0.04 280), oklch(0.14 0.05 278));
+  --gradient-primary: linear-gradient(135deg, oklch(0.62 0.22 275), oklch(0.72 0.2 295));
+  --gradient-card: linear-gradient(160deg, oklch(0.2 0.06 278 / 0.9), oklch(0.16 0.05 278 / 0.6));
+  --shadow-glow: 0 10px 40px -10px oklch(0.62 0.22 275 / 0.45);
+  --shadow-elevated: 0 20px 60px -20px oklch(0.05 0.02 280 / 0.6);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html,
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  body {
+    background-image: var(--gradient-hero);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+@utility bg-gradient-primary {
+  background-image: var(--gradient-primary);
+}
+@utility bg-gradient-card {
+  background-image: var(--gradient-card);
+}
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+@utility shadow-elevated {
+  box-shadow: var(--shadow-elevated);
+}
+@utility text-gradient {
+  background-image: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
