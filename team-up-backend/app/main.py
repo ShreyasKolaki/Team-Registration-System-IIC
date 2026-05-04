@@ -7,7 +7,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "https://aura-frontend-zz0m.onrender.com"],
+    allow_origins=["http://localhost:5173", "team-registration-system-iic.netlify.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
