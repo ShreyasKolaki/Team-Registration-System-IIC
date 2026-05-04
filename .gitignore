@@ -27,3 +27,5 @@ build/
 .Trashes
 ehthumbs.db
 Thumbs.db
+team-up-backend/.env
+team-up-frontend/.env
