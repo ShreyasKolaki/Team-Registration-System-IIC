@@ -8,7 +8,6 @@ This project is a modern event registration platform built with React, FastAPI, 
 - Web-based event exploration and team management
 - Participant dashboard for viewing registered events and team status
 - Protected routes to prevent unauthorized access
-- Modern glassmorphism-inspired UI
 - Data storage in MongoDB Atlas
 
 ## Tech Stack
