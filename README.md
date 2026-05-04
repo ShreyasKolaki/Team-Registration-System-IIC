@@ -1,5 +1,7 @@
 # AURA Team-Based Event Registration System
 
+**Live Demo:** [https://tanstack-start-app.aura-registration-portal.workers.dev](https://tanstack-start-app.aura-registration-portal.workers.dev)
+
 This project is a modern event registration platform built with React, FastAPI, and MongoDB Atlas. It lets participants browse events, form teams, and register seamlessly, and provides a secure dashboard to manage their event participation.
 
 ## Features
