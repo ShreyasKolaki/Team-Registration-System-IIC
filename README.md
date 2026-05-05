@@ -2,6 +2,8 @@
 
 **Live Demo:** [https://tanstack-start-app.aura-registration-portal.workers.dev](https://tanstack-start-app.aura-registration-portal.workers.dev)
 
+**Demo Video:** [Watch on Google Drive](https://drive.google.com/file/d/1Yl5x2qe8tv54C4JnGn1nA4Z7kwXU2HSr/view?usp=drivesdk)
+
 This project is a modern event registration platform built with React, FastAPI, and MongoDB Atlas. It lets participants browse events, form teams, and register seamlessly, and provides a secure dashboard to manage their event participation.
 
 ## Features
